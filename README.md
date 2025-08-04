@@ -1,3 +1,3 @@
 # DEPI DevOps - lab_git
 
-![My Image](Devops1.png)
+![My Image](Devops1.jpeg)

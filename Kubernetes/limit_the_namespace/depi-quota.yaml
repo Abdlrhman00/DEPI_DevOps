@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: depi-quota
+  namespace: depi
+spec:
+  hard:
+    pods: "1"
+    deployments.apps: "1"

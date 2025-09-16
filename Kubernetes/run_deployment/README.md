@@ -1,6 +1,10 @@
-"try to delete one pod and tell what happend"
-Kubernetes will immediately create a new pod because the Deployment maintains the replica count.
+# Task 3 — Deployment
 
-Difference between ReplicaSet vs Deployment:
-ReplicaSet ensures the correct number of pods.
-Deployment manages ReplicaSets, allows rollout, rollback, versioning.
+## What happens here?
+- We create a **Deployment** with 3 replicas of Nginx.
+- When we delete one Pod, the Deployment automatically creates a new one.
+- This shows **self-healing** in Kubernetes.
+
+## ReplicaSet vs Deployment
+- **ReplicaSet**: Ensures the correct number of Pods are running.
+- **Deployment**: Manages ReplicaSets and allows rolling updates & rollbacks.

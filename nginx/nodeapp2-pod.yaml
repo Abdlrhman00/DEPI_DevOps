@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nodeapp2
+  labels:
+    app: nodeapp2
+spec:
+  containers:
+    - name: nodeapp1
+      image: abdlrhman00/nodeapp2:latest
+      ports:
+        - containerPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nodeapp2-service
+spec:
+  selector:
+    app: nodeapp2
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
+  type: ClusterIP

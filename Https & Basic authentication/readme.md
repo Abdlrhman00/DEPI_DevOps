@@ -70,7 +70,7 @@ kubectl create secret generic nginx-basic-auth \
 Apply:
 
 ```bash
-kubectl apply -f k8s/configmap.yaml
+kubectl apply -f k8/configmap.yaml
 ```
 
 ---
@@ -80,8 +80,8 @@ kubectl apply -f k8s/configmap.yaml
 Apply the deployment and service files:
 
 ```bash
-kubectl apply -f k8s/deployment.yaml
-kubectl apply -f k8s/service.yaml
+kubectl apply -f k8/deployment.yaml
+kubectl apply -f k8/service.yaml
 ```
 
 ---
@@ -110,7 +110,7 @@ Check that everything is running properly:
 
 #### 🌐 Get Services
 
-![ConfigMaps Screenshot](./configmaps_screenshot.png)
+![services Screenshot](./service_screenshot.png)
 
 ---
 

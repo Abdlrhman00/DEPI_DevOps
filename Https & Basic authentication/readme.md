@@ -92,54 +92,38 @@ Check that everything is running properly:
 
 #### 🧩 Get Pods
 
-```bash
-kubectl get pods
-```
-
-📸 *Screenshot:* `screenshots/get-pods.png`
+![Pods Screenshot](./pods_screenshot.png)
 
 ---
 
 #### 🔐 Get Secrets
 
-```bash
-kubectl get secrets
-```
-
-📸 *Screenshot:* `screenshots/get-secrets.png`
+![Secrets Screenshot](./secrets_screenshot.png)
 
 ---
 
 #### ⚙️ Get ConfigMaps
 
-```bash
-kubectl get configmaps
-```
-
-📸 *Screenshot:* `screenshots/get-configmaps.png`
+![ConfigMaps Screenshot](./configmaps_screenshot.png)
 
 ---
 
 #### 🌐 Get Services
 
-```bash
-kubectl get svc
-```
-
-📸 *Screenshot:* `screenshots/get-services.png`
+![ConfigMaps Screenshot](./configmaps_screenshot.png)
 
 ---
 
 ### 7️⃣ Test in Browser
 
-1. Copy the **EXTERNAL-IP** from the service:
+1. Copy the **Minikube-IP**:
 
    ```bash
-   kubectl get svc nginx-secure-service
+   minikube ip
    ```
 
 2. Open in browser:
-   `https://<EXTERNAL-IP>`
+   `https://minikube-ip:port`
 
 3. You’ll see a **Basic Auth popup** — enter:
 
@@ -148,9 +132,12 @@ kubectl get svc
    Password: <your password>
    ```
 
+  ![web-1 Screenshot](./webtest_screenshot.png)
+
+
 4. After successful login, you’ll see the **Nginx welcome page**.
 
-📸 *Screenshot:* `screenshots/web-test.png`
+  ![web-2 Screenshot](./webtest-2_screenshot.png)
 
 ---
 

@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-secure
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-secure
+  template:
+    metadata:
+      labels:
+        app: nginx-secure
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:latest
+          ports:
+            - containerPort: 443
+          volumeMounts:
+            - name: nginx-config-secure
+              mountPath: /etc/nginx/nginx.conf
+              subPath: nginx.conf
+            - name: tls-secret
+              mountPath: /etc/nginx/ssl
+            - name: auth-secret
+              mountPath: /etc/nginx/auth
+      volumes:
+        - name: nginx-config-secure
+          configMap:
+            name: nginx-config-secure
+        - name: tls-secret
+          secret:
+            secretName: nginx-tls
+        - name: auth-secret
+          secret:
+            secretName: nginx-basic-auth
